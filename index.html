@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Isabel Fernández Ángel | Clínica Dermoestética en Granada</title>
+    <meta name="description" content="Clínica Dermoestética Dra. Isabel Fernández Ángel en Granada. Medicina estética, dermatología y tratamientos avanzados con criterio médico, seguridad y resultados naturales.">
+    <meta property="og:title" content="Clínica Dermoestética · Dra. Isabel Fernández Ángel">
+    <meta property="og:description" content="Medicina estética y dermatología en Granada con criterio médico y resultados naturales. Tu piel en manos expertas.">
+    <meta property="og:image" content="fachada.png">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ============================================================
+           TEMA MODIFICABLE  —  CAMBIA SOLO ESTO PARA OTRO CLIENTE
+           (perfil: DERMOESTÉTICA PREMIUM -> negro elegante + oro)
+           ============================================================ */
+        :root {
+            --brand:      #C4A05A;   /* Oro (acento principal) */
+            --brand-dark: #A8884A;   /* Oro oscuro (hover) */
+            --accent:     #C4A05A;   /* Acento secundario */
+            --bg:         #0E0E10;   /* Negro cálido (fondo) */
+            --surface:    #16161A;   /* Superficie de tarjetas */
+            --surface-2:  #1E1E22;   /* Superficie alternativa */
+            --text:       #F2EEE6;   /* Crema (texto) */
+            --muted:      #A89E90;   /* Topo cálido (texto secundario) */
+            --font-head:  'Playfair Display', serif;  /* titulares */
+            --font-body:  'Jost', sans-serif;          /* cuerpo */
+        }
+        /* ============================================================ */
+
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); font-weight: 300; }
+        h1,h2,h3,.font-head { font-family: var(--font-head); }
+        html { scroll-behavior: smooth; }
+        .kicker { letter-spacing: 0.34em; text-transform: uppercase; font-size: 0.7rem; font-weight: 500; }
+        .hairline { width: 60px; height: 1px; background: var(--brand); }
+        .bg-cover-fixed { background-size: cover; background-position: center; background-attachment: fixed; }
+        .overlay-hero { background: linear-gradient(180deg, rgba(14,14,16,.62) 0%, rgba(14,14,16,.55) 45%, rgba(14,14,16,.93) 100%); }
+        .overlay-band { background: rgba(14,14,16,.78); }
+        .lift { transition: transform .45s ease, border-color .45s ease; }
+        .lift:hover { transform: translateY(-6px); border-color: var(--brand); }
+        @media (max-width: 768px) { .bg-cover-fixed { background-attachment: scroll; } }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen antialiased">
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300" style="background: transparent;">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="#inicio" class="font-head text-xl tracking-[0.12em] text-white leading-tight">Isabel Fernández <span style="color: var(--brand);">Ángel</span></a>
+            <nav class="hidden md:flex items-center gap-10 text-sm" style="color: #fff;" aria-label="Navegación principal">
+                <a href="#tratamientos" class="hover:text-[var(--brand)] transition-colors tracking-wide">Tratamientos</a>
+                <a href="#doctora" class="hover:text-[var(--brand)] transition-colors tracking-wide">La doctora</a>
+                <a href="#confianza" class="hover:text-[var(--brand)] transition-colors tracking-wide">Por qué nosotros</a>
+                <a href="#contacto" class="hover:text-[var(--brand)] transition-colors tracking-wide">Contacto</a>
+            </nav>
+            <a href="tel:+34958121555" class="hidden md:inline-block border px-6 py-2.5 text-xs kicker transition-colors hover:bg-[var(--brand)] hover:text-black" style="border-color: var(--brand); color: var(--brand);">Reservar consulta</a>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-white" aria-label="Abrir menú">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t" style="background: var(--bg); border-color: rgba(196,160,90,.25);">
+        <div class="px-6 py-4 flex flex-col gap-3 text-sm">
+            <a href="#tratamientos" class="py-1.5">Tratamientos</a>
+            <a href="#doctora" class="py-1.5">La doctora</a>
+            <a href="#confianza" class="py-1.5">Por qué nosotros</a>
+            <a href="#contacto" class="py-1.5">Contacto</a>
+            <a href="tel:+34958121555" class="mt-2 inline-block text-center border px-6 py-2.5 text-xs kicker" style="border-color: var(--brand); color: var(--brand);">Reservar consulta</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="relative min-h-screen flex items-center">
+    <div class="absolute inset-0 bg-cover-fixed" style="background-image:url('fachada.png');"></div>
+    <div class="absolute inset-0 overlay-hero"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 w-full text-center">
+        <p class="kicker mb-6" style="color: var(--brand);">Clínica Dermoestética · Granada</p>
+        <h1 class="font-head text-5xl sm:text-6xl lg:text-7xl leading-[1.04] text-white">
+            Tu piel, en manos<br>de una <span class="italic" style="color: var(--brand);">médico</span>
+        </h1>
+        <p class="mt-8 text-lg font-light text-white/90 max-w-2xl mx-auto">
+            Medicina estética y dermatología con criterio médico. Tratamientos seguros, personalizados y pensados para realzar tu belleza de forma natural.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4 justify-center">
+            <a href="tel:+34958121555" class="px-9 py-3.5 text-xs kicker text-black transition-colors" style="background: var(--brand);">Reservar consulta</a>
+            <a href="#tratamientos" class="px-9 py-3.5 text-xs kicker border border-white/60 text-white hover:bg-white/10 transition-colors">Ver tratamientos</a>
+        </div>
+    </div>
+</section>
+
+<!-- TIRA DE CONFIANZA -->
+<section style="background: var(--surface);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-8">
+        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm" style="color: var(--muted);">
+            <span class="flex items-center gap-2"><span style="color: var(--brand);">✦</span> Médico colegiada</span>
+            <span class="flex items-center gap-2"><span style="color: var(--brand);">✦</span> Protocolos seguros</span>
+            <span class="flex items-center gap-2"><span style="color: var(--brand);">✦</span> Productos certificados</span>
+            <span class="flex items-center gap-2"><span style="color: var(--brand);">✦</span> Resultados naturales</span>
+        </div>
+    </div>
+</section>
+
+<!-- TRATAMIENTOS -->
+<section id="tratamientos" class="py-24 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+            <p class="kicker" style="color: var(--brand);">Tratamientos</p>
+            <h2 class="font-head text-5xl sm:text-6xl mt-4">Medicina y estética en equilibrio</h2>
+            <div class="hairline mx-auto mt-6"></div>
+            <p class="mt-6 text-base" style="color: var(--muted);">Cada tratamiento parte de una valoración médica para ofrecerte lo que de verdad necesitas, con total seguridad.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            <article class="lift bg-[var(--surface)] border p-8" style="border-color: var(--surface-2);">
+                <h3 class="font-head text-3xl" style="color: var(--brand);">Medicina estética facial</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Ácido hialurónico, toxina botulínica y rellenos para un rostro descansado y natural.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] border p-8" style="border-color: var(--surface-2);">
+                <h3 class="font-head text-3xl" style="color: var(--brand);">Dermatología clínica</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Revisión de lunares, acné, manchas y patologías de la piel con diagnóstico médico.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] border p-8" style="border-color: var(--surface-2);">
+                <h3 class="font-head text-3xl" style="color: var(--brand);">Láser y aparatología</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Tecnología avanzada para rejuvenecimiento, manchas y depilación médica.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] border p-8" style="border-color: var(--surface-2);">
+                <h3 class="font-head text-3xl" style="color: var(--brand);">Tratamientos corporales</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Protocolos para flacidez, contorno y cuidado de la piel del cuerpo.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] border p-8" style="border-color: var(--surface-2);">
+                <h3 class="font-head text-3xl" style="color: var(--brand);">Peelings y cuidado facial</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Peelings médicos y rutinas personalizadas para una piel luminosa y sana.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] border p-8" style="border-color: var(--surface-2);">
+                <h3 class="font-head text-3xl" style="color: var(--brand);">Antiedad & bienestar</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Planes integrales para prevenir y tratar los signos del tiempo con armonía.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- BANDA PARALLAX -->
+<section class="relative">
+    <div class="bg-cover-fixed min-h-[440px]" style="background-image:url('fachada.png');"></div>
+    <div class="absolute inset-0 overlay-band flex items-center">
+        <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+            <p class="kicker" style="color: var(--brand);">Nuestro compromiso</p>
+            <p class="font-head text-4xl sm:text-5xl italic mt-5 text-white leading-snug">“La belleza tiene sentido cuando nace de la salud y de la confianza.”</p>
+        </div>
+    </div>
+</section>
+
+<!-- LA DOCTORA -->
+<section id="doctora" class="py-24 sm:py-28" style="background: var(--surface);">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+        <p class="kicker" style="color: var(--brand);">La doctora</p>
+        <h2 class="font-head text-5xl sm:text-6xl mt-4">Dra. Isabel Fernández Ángel</h2>
+        <div class="hairline mx-auto mt-6"></div>
+        <p class="mt-8 text-lg leading-relaxed" style="color: var(--muted);">
+            Detrás de la clínica está la <span style="color: var(--text);">Dra. Isabel Fernández Ángel</span>, que entiende la estética desde la medicina: primero el diagnóstico, después el tratamiento. Su prioridad es que te sientas segura, bien informada y acompañada en cada paso.
+        </p>
+        <p class="mt-5 text-lg leading-relaxed" style="color: var(--muted);">
+            Nada de excesos ni promesas vacías: solo tratamientos con evidencia, productos certificados y un trato cercano para conseguir resultados naturales que respeten tu esencia.
+        </p>
+    </div>
+</section>
+
+<!-- CONFIANZA -->
+<section id="confianza" class="py-24 sm:py-28">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+            <p class="kicker" style="color: var(--brand);">Por qué confiar en nosotros</p>
+            <h2 class="font-head text-5xl sm:text-6xl mt-4">Tu seguridad, lo primero</h2>
+            <div class="hairline mx-auto mt-6"></div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+            <div class="border p-8 text-center" style="border-color: var(--surface-2);">
+                <p class="font-head text-4xl" style="color: var(--brand);">Criterio médico</p>
+                <p class="mt-3 text-sm" style="color: var(--muted);">Toda decisión parte de un diagnóstico profesional.</p>
+            </div>
+            <div class="border p-8 text-center" style="border-color: var(--surface-2);">
+                <p class="font-head text-4xl" style="color: var(--brand);">Seguridad</p>
+                <p class="mt-3 text-sm" style="color: var(--muted);">Protocolos estrictos y materiales homologados.</p>
+            </div>
+            <div class="border p-8 text-center" style="border-color: var(--surface-2);">
+                <p class="font-head text-4xl" style="color: var(--brand);">Naturalidad</p>
+                <p class="mt-3 text-sm" style="color: var(--muted);">Resultados que realzan, sin artificios.</p>
+            </div>
+            <div class="border p-8 text-center" style="border-color: var(--surface-2);">
+                <p class="font-head text-4xl" style="color: var(--brand);">Cercanía</p>
+                <p class="mt-3 text-sm" style="color: var(--muted);">Te escuchamos y te acompañamos en todo momento.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-24 sm:py-28" style="background: var(--surface);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14">
+        <div>
+            <p class="kicker" style="color: var(--brand);">Reservas y contacto</p>
+            <h2 class="font-head text-5xl sm:text-6xl mt-4 leading-tight">Reserva tu valoración</h2>
+            <div class="hairline mt-6"></div>
+            <p class="mt-7 text-base leading-relaxed" style="color: var(--muted);">Pide tu primera consulta y estudiamos tu caso con calma. Te esperamos en pleno Zaidín.</p>
+
+            <div class="mt-9 space-y-6">
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9742;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Teléfono / Cita previa</p>
+                        <a href="tel:+34958121555" class="text-lg font-medium hover:underline">958 12 15 55</a>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9737;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Dirección</p>
+                        <p class="text-lg font-medium">C. Andrés Segovia, 337</p>
+                        <p class="text-sm" style="color: var(--muted);">Zaidín, 18007 Granada</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9788;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Horario</p>
+                        <p class="text-lg font-medium">Pendiente de confirmar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden shadow-xl min-h-[400px]">
+            <iframe
+                title="Ubicación de la Clínica Dermoestética Dra. Isabel Fernández Ángel"
+                src="https://www.google.com/maps?q=Calle+Andr%C3%A9s+Segovia+337,+18007+Granada&output=embed"
+                class="w-full h-full min-h-[400px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-auto py-12 border-t" style="border-color: var(--surface-2);">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+            <p class="font-head text-2xl tracking-wide">Isabel Fernández <span style="color: var(--brand);">Ángel</span></p>
+            <p class="text-sm mt-1" style="color: var(--muted);">Clínica Dermoestética · Granada</p>
+        </div>
+        <div class="flex items-center gap-8 text-sm" style="color: var(--muted);">
+            <a href="#tratamientos" class="hover:text-[var(--text)]">Tratamientos</a>
+            <a href="#doctora" class="hover:text-[var(--text)]">La doctora</a>
+            <a href="#contacto" class="hover:text-[var(--text)]">Contacto</a>
+        </div>
+        <p class="text-xs" style="color: var(--muted);">© <span id="year"></span> Clínica Dermoestética Dra. Isabel Fernández Ángel</p>
+    </div>
+</footer>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    const nav = document.getElementById('nav');
+    function onScroll() {
+        if (window.scrollY > 40) {
+            nav.style.background = 'rgba(14,14,16,.92)';
+            nav.style.backdropFilter = 'blur(8px)';
+            nav.style.boxShadow = '0 8px 24px -16px rgba(0,0,0,.7)';
+        } else {
+            nav.style.background = 'transparent';
+            nav.style.backdropFilter = 'none';
+            nav.style.boxShadow = 'none';
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
